@@ -139,3 +139,36 @@ SoftwareListFreq <- SoftwareListFreq[-Items, ]
 nrow(SoftwareListFreq)
 sample(unique(SoftwareListFreq$ProductName),1000)
 
+# Based on Various scans of the list over time.. create some lists based on
+# keywords that seem to have a high frequency.
+
+SoftwareListFreq[grep('Wordperfect',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+SoftwareListFreq[grep('PDF',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+SoftwareListFreq[grep('GPS | Map',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+SoftwareListFreq[grep('Arc*',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+SoftwareListFreq[grep('SQL | Oracle*',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+# Programming Languages
+SoftwareListFreq[grep('Java | Ruby | C\\+\\+ | Python | javascript ',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
+# Science applications
+SoftwareListFreq[grep('Matlab | Stella | minitab | SPSS | SAS | R for windows',
+                      SoftwareListFreq$ProductName,
+                      ignore.case = T),]
+
