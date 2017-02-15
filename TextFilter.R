@@ -120,6 +120,21 @@ Items <- sapply(PatternList,
 Items <- unlist(Items)
 SoftwareListFreq <- SoftwareListFreq[-Items, ]
 
+# Remove some hard drive drivers..
+PatternList <- c('[0-9]TB','[0-9]+GB')
+
+Items <- sapply(PatternList,
+                function(pattern, txt) {grep(pattern,
+                                             txt,
+                                             ignore.case = TRUE)
+                },
+                txt = SoftwareListFreq$ProductName ,
+                simplify = TRUE)
+
+Items <- unlist(Items)
+SoftwareListFreq <- SoftwareListFreq[-Items, ]
+
+
 # Take a quick random look at what remains
 nrow(SoftwareListFreq)
 sample(unique(SoftwareListFreq$ProductName),1000)
