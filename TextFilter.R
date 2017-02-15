@@ -61,7 +61,7 @@ PatternList <- c('HP','Hewlett-Packard','Hewlett Packard','Hitachi','Deskjet',
                  'Nero','Cisco','WebEx','Flash','Citrix','YouTube','Quicken',
                  'Canon','RealTek','Firmware','AMD','WLAN', 'NetBackup',
                  'Toshiba','AOL','Seagate','Rioch','Logitech', 'Radeon','Xerox',
-                 'Iomega','Norton','Novell','TurboTax','Nikon')
+                 'Iomega','Norton','Novell','TurboTax','Nikon','InstallShield')
 
 Items <- sapply(PatternList,
               function(pattern, txt) {grep(pattern,
@@ -76,7 +76,7 @@ SoftwareListFreq <- SoftwareListFreq[-Items, ]
 
 # Remove Windows Operating system stuff.
 PatternList <- c('Windows Server','Windows 2000','Windows XP','Windows 2008',
-                 'Microsoft Windows')
+                 'Microsoft Windows','Internet Information Services')
 
 Items <- sapply(PatternList,
                 function(pattern, txt) {grep(pattern,
@@ -107,7 +107,7 @@ PatternList <- c('Graphics Controller','Chipset','Driver','Wifi','Roxio',
                  'DYMO','BlackBerry','Kazoo Player','Xbox','TrippLite',
                  'Memory Card','Malwarebytes','Retirement','Dragon',
                  'ipod','blasterball','Palm','Leapfrog','Winamp','Sound Blaster',
-                 'Music','Rosetta','W32','AVG')
+                 'Music','Rosetta','W32','AVG','Western Digital','Yahoo')
 
 Items <- sapply(PatternList,
                 function(pattern, txt) {grep(pattern,
