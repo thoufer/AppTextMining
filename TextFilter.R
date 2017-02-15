@@ -172,3 +172,7 @@ SoftwareListFreq[grep('Matlab | Stella | minitab | SPSS | SAS | R for windows',
                       SoftwareListFreq$ProductName,
                       ignore.case = T),]
 
+
+# Lets view the top 50 records with the highest frequencies
+SoftwareListFreq[order(SoftwareListFreq$Count,
+                      decreasing = TRUE),][1:50,]
