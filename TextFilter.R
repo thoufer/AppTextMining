@@ -36,7 +36,7 @@ SoftwareListFreq$ProductName <- str_trim(SoftwareListFreq$ProductName)
 StandardList <- c('Google','Google Chrome','Chrome','Mozilla','Firefox','Adobe',
                   'Microsoft Office', 'Dell', 'Symantec', '7-Zip','McAfee',
                   'Pulse','KeePass','Vidyo','Bison Connect','Internet Explorer',
-                  'Shoretel','VMWare')
+                  'Shoretel','VMWare','Acrobat')
 
 StandardItems <- sapply(StandardList,
                       function(pattern, txt) {grep(pattern,
